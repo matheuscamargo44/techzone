@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>techzone</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div>
+                <h1>TechZone</h1>
+                <p>Periféricos e Setup</p>
+            </div>
+            <button id="btn-painel" class="btn-painel">Painel</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="formulario" class="oculto">
+            <div class="painel-header">
+                <h2>Cadastrar Produto</h2>
+                <button id="btn-fechar" class="btn-fechar">×</button>
+            </div>
+            <form id="form-produto">
+                <input type="hidden" id="produto-id">
+                <input type="text" id="nome" placeholder="Nome do produto" required>
+                <input type="number" id="preco" placeholder="Preço (R$)" step="0.01" required>
+                <textarea id="descricao" placeholder="Descrição" required></textarea>
+                <input type="number" id="estoque" placeholder="Estoque" required>
+                <input type="url" id="imagem" placeholder="URL da imagem" required>
+                <button type="submit" id="btn-submit">Cadastrar</button>
+            </form>
+        </section>
+
+        <section id="catalogo">
+            <h2>Catálogo</h2>
+            <div id="lista-produtos">
+                <p class="loading">Carregando catálogo...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
